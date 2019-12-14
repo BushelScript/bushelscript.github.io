@@ -1,0 +1,48 @@
+.gh-section {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+.gh-section-left {
+  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+  width:         calc(35% - (#{$spacing-unit} / 2));
+}
+.gh-section-right {
+  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+  width:         calc(60% - (#{$spacing-unit} / 2));
+}
+
+
+@include media-query($on-laptop) {
+  .gh-section-left {
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
+  }
+
+  .gh-section-right {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+@include media-query($on-palm) {
+  .gh-section {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+.gh-section {
+  padding-left: 0;
+}
+
+.social-media-list {
+  margin-bottom: -webkit-calc(#{$spacing-unit} / 8);
+  margin-bottom:         calc(#{$spacing-unit} / 8);
+}
+
+.social-item {
+  margin-left: -webkit-calc(#{$spacing-unit});
+  margin-left:         calc(#{$spacing-unit});
+}
