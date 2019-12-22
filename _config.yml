@@ -26,6 +26,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  BushelScript
 
 header_pages:
+  - about/index.md
   - quick-tutorial/index.md
   - applescript-translation/index.md
 
