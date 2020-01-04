@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About
+title: About BushelScript
+navbar_title: About
 permalink: /about/
 ---
 
@@ -55,21 +56,6 @@ Some more technical specifics; BushelScript:
 Currently, the language is in its early- to mid-growth stages. New features are being added very often, and some will likely be changed or removed with time.
 
 The graphical BushelScript Editor application is also functional but very basic at the moment. I hope to drastically improve the interface once the API and language are more mature and finalized.
-
-### Installation
-
-There's no automated installer yet. For now, you can build the project yourself, which should be pretty straightforward.
-
-To build the core frameworks, language service, English module and graphical Editor from source, do the following:
-
-1. Clone the [GitHub repository](https://github.com/BushelScript/BushelScript) to your local machine. (`git clone https://github.com/BushelScript/BushelScript` in a Terminal prompt, or download the zip file from the web interface).
-2. Make sure [Homebrew](https://brew.sh) and [Xcode](https://developer.apple.com/xcode) are installed. 
-3. `brew install llvm`
-4. `xcodebuild install -workspace Bushel.xcworkspace -scheme BushelScript\ Editor DSTROOT=/`
-
-Language modules are installed to `/Library/BushelScript/Languages` and BushelScript Editor is placed in `/Applications`. Launch the app to begin writing BushelScript programs.
-
-If this doesn't work or you believe I've missed a step, please open an issue.
 
 ## Why “BushelScript”?
 
