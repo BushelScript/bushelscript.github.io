@@ -36,12 +36,24 @@ alert hello world message my message buttons {"Got it"}
 use app Music
 
 name of every track of Music
+join that by ";"
+
 #!ruby
-items = ($stdin.read)[1..-2].split(/\s*,\s*/)
-print items
-	.filter {|item| item =~ /Love/ }
-	.join("\n")
-#!bushelscript
+  print gets
+	  .split(';')
+	  .filter {|item| item =~ /Love/i }
+    .join("\n")
+```
+  </div>
+  <div class="code-showcase" markdown="1">
+```applescript
+use app Finder
+
+-- Name of disk to eject:
+let disk name be "External HD"
+
+tell Finder to eject disk named disk name 
+alert "Disk ejected."
 ```
   </div>
 </div>
