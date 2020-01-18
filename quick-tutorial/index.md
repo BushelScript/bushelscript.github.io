@@ -200,9 +200,9 @@ alert that
 
 ## Resources
 
-Resources are imported with a `use` expression. A `use` expression ensures its resource is accessible, generating a parse error if this is not so. “Accessible” means different things for different resource types.
+Resources are imported with a `use` expression. A `use` expression ensures its resource is accessible, generating a parse error if not. “Accessible” means different things for different resource types.
 
-A `use` expression also defines a _resource term_ referring to the imported resource. Again, this means different things for different resource types, but resource terms will all have one or more of the following properties:
+A `use` expression also defines a _resource term_ referring to the imported resource. Resource terms all have one or more of the following properties, depending on the resource type:
 
 1. **Dictionary**. The term is a (usually exporting) dictionary.
 2. **Command target**. The object that represents the resource handles special commands.
@@ -219,7 +219,7 @@ A `use` expression also defines a _resource term_ referring to the imported reso
 ```applescript
 use app Mail
 use application Safari
--- Generates a parse error if absent:
+-- Generates a parse error if Google Chrome is not installed:
 use app Google Chrome
 ```
 
