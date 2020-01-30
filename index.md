@@ -10,7 +10,7 @@ description: BushelScript is a next-generation open-source alternative to AppleS
 
 <div class="code-showcase-container" markdown="1">
   <div class="code-showcase" style="display: block;">
-    <img src="assets/editor-demo-fullsize.gif" alt="BushelScript Editor demo">
+    <img src="assets/editor-demo.gif" alt="BushelScript Editor demo">
   </div>
   <div class="code-showcase" markdown="1">
 ```applescript
