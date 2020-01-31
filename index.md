@@ -8,11 +8,20 @@ description: BushelScript is a next-generation open-source alternative to AppleS
 
 ### Next-generation open&#x2011;source&nbsp;AppleScript
 
+<img src="assets/editor-demo.gif" alt="BushelScript Editor demo" class="editor-demo">
+
+<h4>
+  BushelScript is a next-generation open-source alternative to AppleScript.
+  <br>
+  <a href="about/">About BushelScript</a>
+</h4>
+
+---
+
+<h4>Sample BushelScript programs</h4>
+
 <div class="code-showcase-container" markdown="1">
-  <div class="code-showcase" style="display: block;">
-    <img src="assets/editor-demo.gif" alt="BushelScript Editor demo">
-  </div>
-  <div class="code-showcase" markdown="1">
+  <div class="code-showcase" style="display: block;" markdown="1">
 ```applescript
 use app Mail
 
@@ -63,11 +72,7 @@ alert "Disk ejected."
 
 <script src="code-showcase.js"></script>
 
-<h4>
-  BushelScript is a next-generation open-source alternative to AppleScript.
-  <br>
-  <a href="about/">About BushelScript</a>
-</h4>
+---
 
 </div>
 
