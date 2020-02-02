@@ -86,7 +86,7 @@ Please note that these are currently _beta_ releases. They will have their fair 
 
 ### Build from source
 
-There are no prebuilt binaries just yet. You can always install from source, which is pretty straightforward if already have Xcode installed and know your way around the command line. For instructions see the [GitHub page](https://github.com/BushelScript/BushelScript).
+Installing from source is always an option, and is pretty straightforward if you already have Xcode installed and know your way around the command line. For instructions see the [GitHub page](https://github.com/BushelScript/BushelScript).
 
 ## Learn BushelScript
 
