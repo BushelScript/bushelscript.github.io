@@ -78,6 +78,12 @@ alert "Disk ejected."
 
 ## Get BushelScript
 
+### Install
+
+See [releases on GitHub](https://github.com/BushelScript/BushelScript/releases). The latest version is at the top of the page.
+
+Please note that these are currently _beta_ releases. They will have their fair share of bugs and missing features. Nevertheless, even the current early beta version has fairly decent AppleScript parity, and allows you to build lots of different, useful things.
+
 ### Build from source
 
 There are no prebuilt binaries just yet. You can always install from source, which is pretty straightforward if already have Xcode installed and know your way around the command line. For instructions see the [GitHub page](https://github.com/BushelScript/BushelScript).
