@@ -18,6 +18,7 @@ Please note that the guide is not finished. There are many features not shown of
   - [Conditional expressions](#conditional-expressions)
   - [Conditional loops](#conditional-loops)
   - [Constant-bounded loops](#constant-bounded-loops)
+  - [Iterative loops](#iterative-loops)
   - [Early return](#early-return)
 5. [The default target](#the-default-target)
 6. [Special objects](#special-objects)
@@ -128,6 +129,17 @@ let choices be {}
 repeat 5 times
   choose from {"Choice A", "Choice B"}
   -- (this command is NYI!) add that to choices
+end
+```
+
+### Iterative loops
+
+```applescript
+use app Finder
+tell Finder to get name of disks
+alert "Your currently connected disks are…"
+repeat for disk name in that
+  alert disk name
 end
 ```
 
