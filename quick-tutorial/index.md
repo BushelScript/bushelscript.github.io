@@ -136,8 +136,8 @@ end
 
 ```applescript
 use app Finder
-tell Finder to get name of disks
 alert "Your currently connected disks are…"
+tell Finder to get name of disks
 repeat for disk name in that
   alert disk name
 end
