@@ -4,6 +4,9 @@ title: Quick Tutorial
 permalink: /quick-tutorial/
 ---
 
+_A new, more complete help site is coming very soon… (early April at the latest)_  
+_The biggest weakness of this project right now is lack of documentation, and I thoroughly intend to solve that._
+
 Welcome to the BushelScript quick tutorial!
 
 This guide will teach you to write your own BushelScript programs as quickly as possible. Through most of the tutorial, we’ll delve into some key ideas you’ll need to understand to make effective use of BushelScript. We’ll then finish by writing some useful, informative or otherwise interesting demo scripts. The latter part is optional, but encouraged if you want to get a more rounded feel for the language and ecosystem.

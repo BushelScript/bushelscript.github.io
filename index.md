@@ -90,6 +90,9 @@ Installing from source is always an option, and is pretty straightforward if you
 
 ## Learn BushelScript
 
+_A new, more complete help site is coming very soon… (early April at the latest)_  
+_The biggest weakness of this project right now is lack of documentation, and I thoroughly intend to solve that._
+
 Check out the [Quick Tutorial](quick-tutorial/) for the basics you need to start writing BushelScript scripts.
 
 If you're looking to convert from AppleScript, consult the [AppleScript Translation Guide](applescript-translation/).

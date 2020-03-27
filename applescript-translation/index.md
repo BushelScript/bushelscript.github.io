@@ -4,6 +4,9 @@ title: AppleScript Translation Guide
 permalink: /applescript-translation/
 ---
 
+_A new, more complete help site is coming very soon… (early April at the latest)_  
+_The biggest weakness of this project right now is lack of documentation, and I thoroughly intend to solve that._
+
 ## Missing features
 
 BushelScript is not yet a complete replacement for AppleScript. Notable missing features include:
