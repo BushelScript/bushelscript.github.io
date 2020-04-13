@@ -25,11 +25,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  BushelScript
 
-header_pages:
-  - about/index.md
-  - quick-tutorial/index.md
-  - applescript-translation/index.md
-
 # Build settings
 theme: minima
 plugins:
