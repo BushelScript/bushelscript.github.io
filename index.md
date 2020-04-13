@@ -9,9 +9,9 @@ description: BushelScript is a next-generation open-source alternative to AppleS
 
 <img src="assets/editor-demo.gif" alt="BushelScript Editor demo" class="editor-demo">
 
-<h4 style="font-weight: normal" markdown=1>
-  BushelScript is a next-generation open-source alternative to [AppleScript](https://en.wikipedia.org/wiki/AppleScript),<br>
-  the language that enables deep automatic control of macOS
+<h4 style="font-weight: normal">
+  <p>BushelScript is a next-generation open-source alternative to <a href="https://en.wikipedia.org/wiki/AppleScript">AppleScript</a>,<br>
+  the language that enables deep automatic control of macOS</p>
 </h4>
 
 #### [About BushelScript](/about/)
