@@ -5,6 +5,8 @@ navbar_title: About
 permalink: /about/
 ---
 
+<div style="text-align: initial" markdown="1">
+
 **BushelScript** is best described as a next-generation open-source alternative to AppleScript.
 
 As opposed to its big brother, BushelScript is open-source and community-driven, meaning it can undergo necessary changes and gain useful features rather than remain stagnant as a side project on life support.
@@ -69,3 +71,5 @@ Since the language is basically just an improved, next-gen AppleScript, I wanted
 4. I, Ian A. Gregory, WILL NOT BE HELD LIABLE for any damages resulting from the failure to read, understand and apply this disclaimer.
 
 I know that this is legally weak, IANAL, etc. But it shouldn't need to be legally strong. Please don't trust this software until things stabilize. Okay?
+
+</div>
