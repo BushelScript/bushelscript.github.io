@@ -63,13 +63,4 @@ The graphical BushelScript Editor application is also functional but very basic 
 
 Since the language is basically just an improved, next-gen AppleScript, I wanted to pun off of that name. For the first few months of the project's life, it was called “AppleScript+”. However, I eventually realized that this could cause trademark issues. The code needed to be scrapped and started from scratch anyway, so from that point on I named it “BushelScript”, after the fruit basket measure commonly used to sell apples.
 
-## Important usage notes and disclaimer
-
-1. This project is still under heavy and active development. Anything could change at any time and for any reason.
-2. This software is not reliable in any way due to its unfinished and semi-prototype-y nature.
-3. You must not rely on this software to do business, control real-world systems, or in any other applications where reliability is at all required.
-4. I, Ian A. Gregory, WILL NOT BE HELD LIABLE for any damages resulting from the failure to read, understand and apply this disclaimer.
-
-I know that this is legally weak, IANAL, etc. But it shouldn't need to be legally strong. Please don't trust this software until things stabilize. Okay?
-
 </div>
