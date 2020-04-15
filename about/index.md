@@ -33,7 +33,7 @@ AppleScript is peculiar, irregular, and notoriously difficult to learn. Its only
 
 What's more, Apple has altogether ceased updating or improving AppleScript. The only recent changes have been security patches, the last of which occurred in 2017. A grand total of zero engineering efforts appear to be devoted to it.
 
-Yet, AppleEvent support in applications is arguably strong as ever. What can be done about this unfortunate state of affairs?
+Yet, AppleEvent support in applications is arguably as strong as ever. What can be done about this unfortunate state of affairs?
 
 ### AppleScript isn't the only way
 
