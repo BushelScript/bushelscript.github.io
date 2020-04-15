@@ -37,7 +37,7 @@ Yet, AppleEvent support in applications is arguably as strong as ever. What can 
 
 ### AppleScript isn't the only way
 
-AppleEvents interfaces can, with enough work, be exposed through any programming language. [`Appscript`](http://appscript.sourceforge.net) is an excellent but defunct example of this. Apple themselves created [JavaScript for Automation](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) but quickly abandoned it. All of this is to say that "AppleEvents without AppleScript" has very much been done before and can be done again.
+AppleEvents interfaces can, with enough work, be exposed through any programming language. [Appscript](http://appscript.sourceforge.net) is an excellent but defunct example of this. Apple themselves created [JavaScript for Automation](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) but quickly abandoned it. All of this is to say that "AppleEvents without AppleScript" has very much been done before and can be done again.
 
 ### We can do it ourselves
 
