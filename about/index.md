@@ -7,60 +7,69 @@ permalink: /about/
 
 <div style="text-align: initial" markdown="1">
 
-**BushelScript** is best described as a next-generation open-source alternative to AppleScript.
+**BushelScript** is best described as a next-generation open-source alternative to [AppleScript](https://en.wikipedia.org/wiki/AppleScript). It is a macOS scripting language designed with the following principal goals in mind:
 
-As opposed to its big brother, BushelScript is open-source and community-driven, meaning it can undergo necessary changes and gain useful features rather than remain stagnant as a side project on life support.
+- Be useful:
+  - Displace AppleScript for most practical AppleEvent scripting.
+  - Supersede AppleScript as "the ultimate duct tape" by integrating with tons of different scripting interfaces.
+  - Add practically useful features on top of an AppleScript-lookalike base.
+- Be predictable:
+  - Be open-source and driven by the community.
+  - Be straightforward to read and minimally confusing to write and debug.
+  - Avoid obscure, lacking or useless features.
+- Be accessible:
+  - Don't force novice scripters to read code with unintelligible symbols.
+  - Don't force experienced programmers into a natural language paradigm.
+  - Avoid alienating non-English speakers.
+  - Seamlessly translate between programmer/user registers and different natural language bases.
 
-The real tragedy of AppleScript is not its becoming obsolete or irrelevant; tons of Apple-supported macOS apps still have healthy scripting interfaces. No, the tragedy is that the language through which such functionality is presented, with all its quirks and weak points and even utter failures, is extremely unlikely to receive any badly needed improvements in the future, if any changes at all. It is stuck in maintenance (read: bugfix and security hole-filling) mode and will be for years to come if we, the users, don't replace it with something better whose fate we can control.
+## Backstory
 
-It's been my pet project for over three years now to try to create a less-frustrating yet equally useful alternative to the confusing and arcane nightmare that is AppleScript. BushelScript aims to do everything that made AppleScript useful, and hopefully do it better.
+Many macOS apps, including those preinstalled by Apple, have powerful scripting interfaces that parallel their GUI. These interfaces are used via messages called _AppleEvents_, which are sent back and forth between applications.
 
-That said, here's a pitch I wrote near the beginning of the project in its current form:
+AppleEvents were developed so that users could automate any task that they would otherwise perform manually. The project was in many ways a spectacular success, and it even survived a foundational rewrite of Apple's flagship operating system. Yet the user's gateway to this venerable automation system, its scripting language, is to this day left sorely and bafflingly lacking.
 
-## Manifesto
+AppleScript is peculiar, irregular, and notoriously difficult to learn. Its only official description is an opaque and wordy document on Apple's Developer site, and scouring aging websites for the correct incantations is a horrendously regular activity.
 
-BushelScript is a next-generation open-source reimplementation of AppleScript that's more usable, predictable and extensible.
+What's more, Apple has altogether ceased updating or improving AppleScript. The only recent changes have been security patches, the last of which occurred in 2017. A grand total of zero engineering efforts appear to be devoted to it.
 
-* **Next-generation:** BushelScript’s design is more modern and robust than AppleScript’s: written from the ground up for an operating system with memory segmentation and multitasking!
-* **Open-source:** BushelScript’s source code is very intentionally open to the public: through the muddy waters that lurk in the dark corners of AppleScript none shall trudge again
-* **Reimplementation:** BushelScript is meant to eventually be a complete AppleScript replacement. 1\. Convert scripts 2\. AWW YEH 3\. Profit (from the project's open-source nature, of course)
-* **AppleScript:** BushelScript reimplements **AppleScript**: you know, the language that lets you manipulate your graphical applications in exchange for your sanity, soul, and all the good variable names, whilst barfing up four different function definition syntaxes? Yeah, that one
-* **More usable:** BushelScript sports a sweet host of built-in libraries: no more outsourcing your string chopping to avoid fun dances like the (characters 1 thru (length of the\_string - (offset of " " in (reverse of characters of the\_string as string))) of the\_string) as string/and/dammit/I/forgot/to/reset/my/text/item/delimiters
-* **More predictable:** BushelScript eschews the unexpected, providing avoidance mechanisms for terminology conflicts, “can’t continue”s, HFS path strings, and other summer hailstorms
-* **More extensible:** BushelScript nearly bursts at the seams with extension opportunities: but it won't, of course, because it doesn’t need any patchwork to hold it all together. Scripting additions and FBAs, begone!
+Yet, AppleEvent support in applications is arguably strong as ever. What can be done about this unfortunate state of affairs?
 
-Some more technical specifics; BushelScript:
+### AppleScript isn't the only way
 
-* Intends to replace AppleScript, so that you never need to write another line of it again
-* Has AppleScript-like syntax, so as to maintain average Joe usability
-* If you cringed at that last point, I promise it’s improved this time, but even then BushelScript gives you options ;)
-* Does **not** reimplement the entire AppleScript language just to be compatible with existing scripts
-    * BushelScript *was* initially to be a simple open source reimplementation of AppleScript, but
-    * AppleScript has warts-o-plenty in its core design, hurting its reputation amongst professional programmers and amateur app scripters alike
-    * Also, in general, AppleScript is pretty poorly understood, and while an open source version would help with that, why not just *make it easier?*
-* Has or intends in the future to have the following interfaces:
-    * Dynamic Swift library interface to compile, run, etc. scripts (analog: OSAKit)
-    * Lower-level interface to perform parse tree-level program display formatting and transformations (analog: AppleScript script display formatting, Clang fix-its)
-    * A Script Editor-esque application with three script display modes:
-        * A text mode that displays styled formatted script text (analog: AppleScript formatted script text)
-        * A graphical mode that uses buttons and menus to that are easier to get started with (analog: Scratch language; but not drag’n’drop)
-        * A hybrid of the two, where the text is editable but there are still coloured boxes, drop-down menus, and assistive buttons that are a little more out of the way, to allow for quickly typing scripts while still having the convenience of the blocks mode
-    * An Automator action to run BushelScript scripts (analog: Run AppleScript action)
-    * A command-line script running tool (analog: `​osascript`​)
-* Relies on a language module system, similar in spirit to early AppleScript’s “dialects” but less arcane
-* Has two primary language modules:
-    * BushelScript is the AppleScript lookalike language for everyone
-    * AS++ is specifically targeted towards programmers who want to get scripting stuff done quicker and with a syntax that's more familiar and symbol-heavy
-    * English is of course the dominant version of these two, but they could theoretically be ported to a wider range of natural language bases—e.g., English names are “BushelScript (English)”, `​bushelscript_en`​, and “AS++ (English)”, `​aspp_en`​, while French names would be “BushelScript (français)”, `​bushelscript_fr`​, and “AS++ (français)”, `​aspp_fr`​.
+AppleEvents interfaces can, with enough work, be exposed through any programming language. [`Appscript`](http://appscript.sourceforge.net) is an excellent but defunct example of this. Apple themselves created [JavaScript for Automation](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) but quickly abandoned it. All of this is to say that "AppleEvents without AppleScript" has very much been done before and can be done again.
 
-## Status
+### We can do it ourselves
 
-Currently, the language is in its early- to mid-growth stages. New features are being added very often, and some will likely be changed or removed with time.
+It has been my pet project for the last couple of years to create a modern and open-source alternative to the unmaintained and arcane nightmare that is AppleScript. The truth is, AppleScript will remain the dominant AppleEvent shell for years to come if nothing else succeeds at displacing it.
 
-The graphical BushelScript Editor application is also functional but very basic at the moment. I hope to drastically improve the interface once the API and language are more mature and finalized.
+It is my humble belief that only an open-source, community-driven project could ever manage this great feat. Behind closed doors, such a project ends up rotting away; and even in the open, if collaboration is not fostered and few understand its inner workings, the project dies when its author moves on.
 
-## Why “BushelScript”?
+### My answer
 
-Since the language is basically just an improved, next-gen AppleScript, I wanted to pun off of that name. For the first few months of the project's life, it was called “AppleScript+”. However, I eventually realized that this could cause trademark issues. The code needed to be scrapped and started from scratch anyway, so from that point on I named it “BushelScript”, after the fruit basket measure commonly used to sell apples.
+BushelScript aims to be open-source and driven by a community of users. It is actively worked on and has comprehensive documentation. It is learnable and accessible; it is predictable and regular; and it is useful and trivial to integrate with more mature solutions.
+
+## Get started with BushelScript
+
+Check out the [help site](/help/) for guides, reference material, and a community Discord server. Or go to the [GitHub page](https://github.com/BushelScript/BushelScript) to try out a release, report a bug, or hack on the code.
+
+If you have feedback, please do not hesitate to email bushelscript-feedback[at]outlook.com, or join the [Discord server](https://discord.gg/xdyCK9t) and I'll happily chat with you.
+
+Thanks for your interest, and together we can do great things.
+
+## FAQ
+
+### Why "BushelScript"?
+
+Since the language is supposed to be a next-generation alternative to AppleScript, I wanted to pun off of that name. For the first few months of the project's life, I called it "AppleScript+". However, I eventually realized that this name could cause trademark issues. The code needed to be scrapped and started from scratch anyway, so I decided to rename it after the [bushel basket](https://en.wikipedia.org/wiki/Bushel), the container of choice for selling agricultural commodities such as apples at farmers' markets and the like.
+
+### What is a "language module"?
+
+This is currently an internal generalization that I hope to make use of soon. Each language module essentially defines a unique syntax for the common "Bushel Language" foundation (we need a better name for this). Language modules each compile code down to a shared representation, which can then be run or pretty printed by the Core with no additional code required. Each language module is also able to reformat code from this shared representation into its own syntax, and through this mechanism, code can (in theory) be seamlessly translated from one syntax set into the other.
+
+There are two primary usability targets of the language module system:
+
+1. Programmer/user registers. Users who are novice scripters really appreciate the English-like syntax of AppleScript, but programmers generally despise it. We can offer language modules that cater to each.
+2. English/français/español… etc., etc. Not everyone is comfortable with English, and it would be great to be sensitive to that and offer scripting languages based on other natural languages.
 
 </div>
