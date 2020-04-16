@@ -60,7 +60,7 @@ notification "Disk '" & disk name & "' ejected."
 #!bash
 mdfind -onlyin ~ "kMDItemPhysicalSize > 1000000" |
   wc -l |
-  sed -r 's/\s//g'
+  ruby -pe '$_.strip!'
 #!
 let count be that
 
