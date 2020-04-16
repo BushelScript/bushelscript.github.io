@@ -64,7 +64,7 @@ mdfind -onlyin ~ "kMDItemPhysicalSize > 1000000" |
 #!
 let count be that
 
-alert "Your home folder has " & count & "items over 1 MB."
+alert "Your home folder has " & count & " items over 1 MB."
 ```
   </div>
   <div class="code-showcase" markdown="1">
