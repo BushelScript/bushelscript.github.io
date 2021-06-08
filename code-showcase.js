@@ -1,5 +1,5 @@
 const cycleInterval = 1000; // ms
-const codeTime = 10;
+const codeTime = 5;
 
 const programs = document.getElementsByClassName("code-showcase");
 

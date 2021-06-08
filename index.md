@@ -1,84 +1,44 @@
 ---
 layout: main
-description: BushelScript is a next-generation open-source alternative to AppleScript.
+description: Script your life with BushelScript
 ---
 
 # BushelScript
 
-### Automate macOS to new heights
+## A macOS scripting language with unparalleled connective power
 
-<img src="assets/editor-demo.gif" alt="BushelScript Editor demo" class="editor-demo">
-
-<h4 style="font-weight: normal">
-  <p>BushelScript is a next-generation open-source alternative to <a href="https://en.wikipedia.org/wiki/AppleScript">AppleScript</a>,<br>
-  the language that enables deep automatic control over macOS</p>
-</h4>
-
-#### [About BushelScript](/about/)
+<!-- <img src="assets/editor-demo.gif" alt="BushelScript Editor demo" class="editor-demo"> -->
 
 ---
 
-#### Sample BushelScript programs
-
 <div class="code-showcase-container" markdown="1">
   <div class="code-showcase" style="display: block;" markdown="1">
-```applescript
--- Display information.
-let hello world be "Hello, world!"
-let my message be "This creates an alert box in BushelScript."
-
-alert hello world message my message buttons {"Got it"}
 ```
-  </div>
-  <div class="code-showcase" markdown="1">
-```applescript
--- Draft an email.
 use app Mail
-let the recipient be "bob@example.com"
-let the subject be "Hello from BushelScript!"
-
-tell Mail
-  tell make new outgoing message with properties {subject: the subject}
-    make new to recipient with properties {address: the recipient}
-  end
-end
+let subject line be ask "Please enter a subject:"
+tell Mail to make new outgoing message with properties {subject: subject line}
 ```
   </div>
   <div class="code-showcase" markdown="1">
-```applescript
--- Eject a disk.
-use app Finder
-let disk name be "External HD"
-
-tell Finder to eject disk named disk name 
-notification "Disk '" & disk name & "' ejected."
 ```
-  </div>
-  <div class="code-showcase" markdown="1">
-```applescript
--- Find large files.
+use library Shell
+let 1 MiB be pow 2 to the 20
+tell Shell to export 1 MiB to "size"
 #!bash
-mdfind -onlyin ~ "kMDItemPhysicalSize > 1000000" |
-  wc -l |
-  ruby -pe '$_.strip!'
+mdfind -onlyin ~ "kMDItemPhysicalSize > $size" | wc -l | ruby -pe '$_.strip!'
 #!
-let count be that
-
-alert "Your home folder has " & count & " items over 1 MB."
+"Your home folder has " & that & " items at least 1 MiB in size."
 ```
   </div>
   <div class="code-showcase" markdown="1">
-```applescript
--- Search for songs.
+```
+use library Shell
 use app Music
-
-name of every track of Music
-join that by "`"
+tell Shell to export (get name of every track of Music) to "track_names"
 #!ruby
-keyword = 'Christmas'
-print gets
-  .split('`')
-	.filter {|item| item =~ /#{keyword}/i }
+print ENV['track_names']
+  .split(ENV['BUSHEL_LIST_DELIMITER'])
+  .filter {|item| item =~ /Love/i }
   .join("\n")
 ```
   </div>
@@ -88,23 +48,38 @@ print gets
 
 ---
 
-#### Check out the [help site](/help/) for guides, reference material, and other docs
+<h3>Script your life with</h3>
+<div class="top-links-container">
+  <p>
+    <b>Native AppleEvent support:</b> Never write another line of <a href="https://en.wikipedia.org/wiki/AppleScript">AppleScript</a>.<br>
+    <b>Shell integration:</b> Jump between different <a href="https://en.wikipedia.org/wiki/Unix_shell">shells</a> and <a href="https://en.wikipedia.org/wiki/List_of_interpreted_languages">interpreters</a> at will.<br>
+    <b>Syntactic flexibility:</b> Write your code in <em>your</em> native language. (Coming soon)<br>
+    <b>Continuous, open development:</b> Striving for transparency and valuing feedback.
+  </p>
+  <div class="hflex separated">
+     <a href="/about/">About BushelScript</a>
+     <a href="/help/">Learn BushelScript</a>
+   </div>
+  <div class="hflex">
+    <div class="hflex separated">
+      <a href="https://github.com/BushelScript/BushelScript/releases/latest">Latest Release</a>
+      <a href="https://github.com/BushelScript/BushelScript">
+        <!-- <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> -->
+        Source Code
+      </a>
+    </div>
+    <a class="github-button" href="https://github.com/BushelScript/BushelScript/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch BushelScript/BushelScript on GitHub">Watch</a>
+    <a class="github-button" href="https://github.com/BushelScript/BushelScript" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star BushelScript/BushelScript on GitHub">Star</a>
+    <a class="github-button" href="https://github.com/BushelScript/BushelScript/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue BushelScript/BushelScript on GitHub">Issue</a>
+  </div>
+</div>
 
 ---
 
-#### Grab the latest beta release [here](https://github.com/BushelScript/BushelScript/releases)
+Design of BushelScript
 
-The latest version is at the top of the page.
+<div class="list-plain-style" markdown="1">
 
-#### Alternatively, [build from source](https://github.com/BushelScript/BushelScript) (requires Xcode)
+- [Command Model](https://igregory.ca/2021/bushel-command-model/)
 
----
-
-#### <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">{{ site.github_username| escape }}</span></a>
-
-<h4>
-  <a class="github-button" href="https://github.com/BushelScript/BushelScript/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch BushelScript/BushelScript on GitHub">Watch</a>
-  <a class="github-button" href="https://github.com/BushelScript/BushelScript" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star BushelScript/BushelScript on GitHub">Star</a>
-  <a class="github-button" href="https://github.com/BushelScript/BushelScript/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork BushelScript/BushelScript on GitHub">Fork</a>
-  <a class="github-button" href="https://github.com/BushelScript/BushelScript/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue BushelScript/BushelScript on GitHub">Issue</a>
-</h4>
+</div>

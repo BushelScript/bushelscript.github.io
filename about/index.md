@@ -7,6 +7,8 @@ permalink: /about/
 
 <div style="text-align: initial" markdown="1">
 
+[← Home](/)
+
 **BushelScript** is best described as a next-generation open-source alternative to [AppleScript](https://en.wikipedia.org/wiki/AppleScript). It is a macOS scripting language designed with the following principal goals in mind:
 
 - Be useful:
@@ -49,19 +51,11 @@ It is my humble belief that only an open-source, community-driven project could 
 
 BushelScript aims to be open-source and driven by a community of users. It is actively worked on and has comprehensive documentation. It is learnable and accessible; it is predictable and regular; and it is useful and trivial to integrate with more mature solutions.
 
-## Get started with BushelScript
-
-Check out the [help site](/help/) for guides, reference material, and a community Discord server. Or go to the [GitHub page](https://github.com/BushelScript/BushelScript) to try out a release, report a bug, or hack on the code.
-
-If you have feedback, please do not hesitate to email bushelscript-feedback[at]outlook.com, or join the [Discord server](https://discord.gg/xdyCK9t) and I'll happily chat with you.
-
-Thanks for your interest, and together we can do great things.
-
 ## FAQ
 
 ### Why "BushelScript"?
 
-Since the language is supposed to be a next-generation alternative to AppleScript, I wanted to pun off of that name. For the first few months of the project's life, I called it "AppleScript+". However, I eventually realized that this name could cause trademark issues. The code needed to be scrapped and started from scratch anyway, so I decided to rename it after the [bushel basket](https://en.wikipedia.org/wiki/Bushel), the container of choice for selling agricultural commodities such as apples at farmers' markets and the like.
+Since the language is supposed to be a next-generation alternative to AppleScript, I wanted to pun off of that name. For the first few months of the project's life, I called it "AppleScript+". However, I eventually realized that this name could cause trademark issues. The code needed to be scrapped and started from scratch anyway, so I decided to rename it after the [bushel basket](https://en.wikipedia.org/wiki/Bushel), a container for agricultural goods such as apples.
 
 ### What is a "language module"?
 
@@ -71,5 +65,7 @@ There are two primary usability targets of the language module system:
 
 1. Programmer/user registers. Users who are novice scripters really appreciate the English-like syntax of AppleScript, but programmers generally despise it. We can offer language modules that cater to each.
 2. English/français/español… etc., etc. Not everyone is comfortable with English, and it would be great to be sensitive to that and offer scripting languages based on other natural languages.
+
+[← Home](/)
 
 </div>
