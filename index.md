@@ -14,14 +14,14 @@ description: Script your life with BushelScript
 <div class="code-showcase-container" markdown="1">
   <div class="code-showcase" style="display: block;" markdown="1">
 ```
-use app Mail
-let subject line be ask "Please enter a subject:"
-tell Mail to make new outgoing message with properties {subject: subject line}
+require app Mail
+tell Core to ask "Please enter a subject:"
+tell Mail to make new outgoing message with properties {subject: that}
 ```
   </div>
   <div class="code-showcase" markdown="1">
 ```
-use library Shell
+require library Shell
 let 1 MiB be pow 2 to the 20
 tell Shell to export 1 MiB to "size"
 #!bash
@@ -32,8 +32,8 @@ mdfind -onlyin ~ "kMDItemPhysicalSize > $size" | wc -l | ruby -pe '$_.strip!'
   </div>
   <div class="code-showcase" markdown="1">
 ```
-use library Shell
-use app Music
+require library Shell
+require app Music
 tell Shell to export (get name of every track of Music) to "track_names"
 #!ruby
 print ENV['track_names']
